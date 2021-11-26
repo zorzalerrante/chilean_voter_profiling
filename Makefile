@@ -106,10 +106,6 @@ setup-conda-forge:
 	conda config --add channels conda-forge
 	conda config --set channel_priority strict
 
-## install jupyter notebook kernel
-install-kernel:
-	conda run --name '$(ENV_NAME)' python -m ipykernel install --user --name '$(ENV_NAME)' --display-name "Python ($(ENV_NAME))"
-
 ## download data from external sources
 download-external:
 	sh ./scripts/download_casen_2017.sh
