@@ -37,3 +37,4 @@ dependencies:
     - emoji
     - git+https://github.com/zorzalerrante/aves
     - xlrd
+    - openpyxl
