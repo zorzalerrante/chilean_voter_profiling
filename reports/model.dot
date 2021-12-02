@@ -1,0 +1,70 @@
+digraph G {
+    rankdir="TB";
+    node [shape=circle, style=filled, fillcolor=white; fontname="Linux Biolinum O", fixedsize=True, fontsize=16, width=2];
+    edge [color="#666666", fontname="Linux Biolinum O", fontsize=12];
+    overlap = false;
+    splines = true;
+
+    candidatos [label="Candidatos"];
+    plebiscito [label="Apruebo/Rechazo"];
+
+    candidatos -> prediccion_2021_1;
+    plebiscito -> prediccion_2020;
+    plebiscito -> plebiscito_2020;
+    candidatos -> presidenciales_2021;
+
+    comunas [label="Comuna"]
+    presidenciales_2021 -> comunas;
+    comunas -> demografia;
+    comunas -> ingreso;
+
+    comunas -> delitos_2016;
+
+    plebiscito_2020 -> comunas;
+
+    subgraph cluster_1 {
+        label = "Servel";
+        color = "#efefef";
+        fontname = "Linux Biolinum O";
+        style = filled;
+        
+        presidenciales_2021 [label="Resultados\nPresidenciales 2021\n(Primera Vuelta)"];
+        plebiscito_2020 [label="Resultados\nPlebiscito 2020"];
+    }
+
+    subgraph cluster_2 {
+        label = "CASEN (2017 y 2020)";
+        color = "#efefef";
+        fontname = "Linux Biolinum O";
+        style = filled;
+        demografia [label="Atributos\nDemográficos"];
+        ingreso [label="Ingreso y\nAtributos Económicos"];
+
+
+    }
+    
+    subgraph cluster_3 {
+        label = "Twitter";
+        color = "#efefef";
+        fontname = "Linux Biolinum O";
+        style = filled;
+        prediccion_2021_1 [label="Predicción Voto\nPrimera Vuelta"];
+        prediccion_2020 [label="Predicción Voto\nPlebiscito"];
+        transicion [label="Matriz de Transición"];
+        prediccion_2020 -> transicion;
+        prediccion_2021_1 -> transicion;
+    }
+
+    transicion -> candidatos;
+    transicion -> plebiscito;
+
+    subgraph cluster_4 {
+        label = "Subsecretaría de prevención\ndel delito";
+        color = "#efefef";
+        fontname = "Linux Biolinum O";
+        style = filled;
+        delitos_2016 [label="Delitos de mayor\nconnotación social\n(2016)"];
+    }
+
+
+}
