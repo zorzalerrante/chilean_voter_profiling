@@ -6,7 +6,7 @@ dependencies:
   - black
   - graphviz
   - python=3.7
-  - matplotlib
+  - matplotlib=3.4.3
   - seaborn
   - pandas
   - geopandas
