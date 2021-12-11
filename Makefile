@@ -92,6 +92,7 @@ uninstall-pre-commit:
 ## install package in editable mode
 install-package:
 	conda run --name '$(ENV_NAME)' python -m pip install --editable .
+	conda run --name '$(ENV_NAME)' python -m pip install --editable aves/.
 
 ## uninstall package
 uninstall-package:
