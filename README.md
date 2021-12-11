@@ -1,13 +1,17 @@
-# chilean_voter_profiling
+# Perfilamiento del voto en Chile
 
-Voter profiling using public data sources.
+Notebook y scripts para descargar bases de datos públicas, cruzarlas, y perfilar el voto en las elecciones presidenciales 2021 en Chile.
 
-## Setup
+Este repositorio utiliza la licencia [MIT Anti Fascismo](https://github.com/jamiebuilds/anti-fascist-mit-license).
+
+## Configuración e Instalación
 
 ```sh
-# Create conda environment, install dependencies on it and activate it
+# Crea el entorno de conda e instala todo lo necesario (excepto aves)
 make conda-create-env
+# Instala aves
+make install-package
 
-# this will download the external datasets needed to run the notebooks
+# Descarga los datos :)
 make download-external
 ```

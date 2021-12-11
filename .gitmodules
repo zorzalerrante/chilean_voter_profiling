@@ -1,3 +1,6 @@
 [submodule "data/external/programas-presidenciales-2021"]
 	path = data/external/programas-presidenciales-2021
 	url = https://github.com/rivaquiroga/programas-presidenciales-2021
+[submodule "aves"]
+	path = aves
+	url = git@github.com:zorzalerrante/aves.git

@@ -35,7 +35,6 @@ dependencies:
     - git+https://github.com/mims-harvard/scikit-fusion
     - pymunk
     - emoji
-    - git+https://github.com/zorzalerrante/aves
     - xlrd
     - openpyxl
     - geopy
